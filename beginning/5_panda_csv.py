@@ -18,5 +18,18 @@ df = pd.read_csv(r"http://sololearn.com/uploads/files/titanic.csv")
 # print(small_df.head())
 
 # Creating a Column
-df["male"] = df["Sex"] == "male"
-print(df.head())
+# df["male"] = df["Sex"] == "male"
+# print(df.head())
+
+# Creating an Array
+# array = df['Fare'].values
+# print(array)
+
+# DataFrame to a Numpy
+# two_dim_array = df[["Pclass", "Sex", "Fare"]].values
+# print(two_dim_array)
+
+#Numpy Shape
+arr = df[["Survived", "Pclass"]].values
+shape = arr.shape
+print(shape)

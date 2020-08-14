@@ -29,7 +29,17 @@ df = pd.read_csv(r"http://sololearn.com/uploads/files/titanic.csv")
 # two_dim_array = df[["Pclass", "Sex", "Fare"]].values
 # print(two_dim_array)
 
-#Numpy Shape
-arr = df[["Survived", "Pclass"]].values
+# Numpy Shape
+arr = df[["Pclass", "Fare", "Age"]].values
 shape = arr.shape
-print(shape)
+# print(shape)
+# print(arr[0, 1])
+# print(arr[1])
+# print(arr[:, 1])
+
+# Mask
+mask = arr[:, 2] < 18
+# kids = arr[mask]
+# kids = arr[arr[:, 2] < 18]
+sum_of_kids = sum(mask)  # mask.sum()
+print(sum_of_kids)
